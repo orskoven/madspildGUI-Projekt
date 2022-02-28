@@ -1,0 +1,13 @@
+package com.example.madspildguiprojekt;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class MadspildGuiProjektApplication {
+
+    public static void main(String[] args) {
+        SpringApplication.run(MadspildGuiProjektApplication.class, args);
+    }
+
+}
