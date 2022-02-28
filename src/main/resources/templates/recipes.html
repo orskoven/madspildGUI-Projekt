@@ -2,9 +2,117 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Opskrifter | Danmark Mod Madspild</title>
+
+    <style>
+        .navigator{
+            background-color: beige;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            padding: 20px;
+            margin: 10px 0px;
+        }
+
+        .navigator a{
+            color: #114d4d;
+            text-decoration: none;
+            font-family: "Arial Black";
+        }
+
+        .navigator a:hover {
+            color: black;
+        }
+
+        .navigator a.opskrifter {
+            color: sandybrown;
+        }
+
+        .box{
+            background-color: beige;
+            display: flex;
+            height: 500px;
+            padding: 25px 10px;
+            margin: 25px 0px;
+            flex-direction: row;
+            justify-content: space-around;
+
+
+        }
+
+        .ret{
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            padding: 25px 70px;
+            text-align: center;
+
+        }
+
+        .box hr {
+            display: block;
+
+
+        }
+
+
+
+
+
+    </style>
 </head>
 <body>
+
+<div class="container">
+   <!--  <header class = "titel"> </header> -->
+
+    <div class="navigator top">
+        <a href="index.html">Forside</a>
+        <a href="counter.html">Counter</a>
+        <a class = "opskrifter" href="recipes.html">Opskrifter</a>
+        <a href="tips.html">Gode Råd / Tips</a>
+    </div>
+
+
+    <div class="box snacks">
+       <!-- <header>Snacks</header> -->
+        <div class="ret ret1">
+            <img src="../static/Hjemmelavetrugbrødschips.jpeg" height="160px" width="160px">
+            <p>Grønsags chips</p>
+            <hr>
+
+        
+        </div>
+        <div class="ret ret2">
+            <img src="../static/Hjemmelavetrugbrødschips.jpeg" height="160px" width="160px">
+            <p>Rugbrødschips</p>
+        </div>
+
+        <div class="ret ret3">
+            <img src="../static/Hjemmelavetrugbrødschips.jpeg" height="160px" width="160px">
+            <p>Gnave grønt</p>
+
+        </div>
+    </div>
+
+
+    <div class="box varme-retter">
+       <!-- <header>Varme Retter</header> -->
+        <div class="ret ret4">WOK</div>
+        <div class="ret ret5">Biksemad</div>
+        <div class="ret ret6">Ovnfad med grønsager og kylling</div>
+        <div class="ret ret7">Mexi wraps</div>
+    </div>
+
+    <div class="box jeg-må-godt">
+       <!--  <header>..."jeg må godt"</header> -->
+        <div class="ret ret8">Frugtsalat</div>
+        <div class="ret ret9">Smoothie</div>
+    </div>
+
+
+
+</div>
 
 </body>
 </html>
