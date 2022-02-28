@@ -89,12 +89,25 @@
             }
         }
         .titleboxes{
-            margin: -300px 0px;
+            margin: -290px 0px;
             background-color: beige;
             padding: 1000px 0px;
             display: flex;
             flex-direction: row;
-            justify-content: space-around;
+        }
+        .elem{
+            position: relative;
+            background-color: lightsalmon;
+            margin: -900px 25px;
+            padding: 10px 10px;
+        }
+        .elem:hover {animation:spin2 0.001s ease-in-out infinite;}
+
+        @keyframes spin2 {
+            100% {
+                -webkit-transform: rotate(-360deg);
+                transform: rotate(-360deg);
+            }
         }
 
 
@@ -124,11 +137,14 @@
 <img src="icon-carrot-615489b8be6ec.png" id="div5" alt="icon-carrot-615489b8be6ec.png"/>
 </div>
 <div class="titleboxes">
-    <div id="box1"></div>
-    <div id="box2"></div>
-    <div id="box3"></div>
-    <div id="box4"></div>
+    <div id="box1">
+    </div>
+        <div class="elem">
+            <div id="go1">
+        </div>
+    </div>
 </div>
-
+            </div>
+            </div></div></div></div>
 </body>
 </html>
