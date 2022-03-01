@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Opskrifter | Danmark Mod Madspild</title>
+    <title>Tøm Køleskabet | Danmark Mod Madspild</title>
 
     <style>
         .navigator{
@@ -38,25 +38,65 @@
             justify-content: space-around;
             color: #114d4d;
             font-family: "Arial Black";
-            font-size: 14px;
+            font-size: 18px;
 
 
         }
 
         .ret{
-            background-color: white;
             display: flex;
             flex-direction: column;
-            padding: 25px 70px;
+            padding: 5% 10%;
             text-align: center;
-            align-content: center;
-            width: 150px;
-            border: #114d4d solid ;
+            align-items: center;
+            width: 3%;
+            border: #114d4d solid;
 
         }
 
+        hr{
+            height: 0.5%;
+            width: 100%;
+            border-width:0;
+            background-color: sandybrown;
+            align-self: center;
+
+        }
+
+        .indgredienser {
+            font-size: 18px;
+            font-style: italic;
+            font-family: Arial;
+            line-height: 1.6;
+
+        }
+
+        footer a{
+            color: sandybrown;
+            text-decoration: none;
+            font-size: 10px;
+            line-height: normal;
+            display: flex;
+            align-items: flex-end;
+        }
+
+        .tekst{
+            display: flex;
+            background-color: sandybrown;
+            font-family: "Arial Black";
+            font-size:20px;
+            font-style: italic;
+            width: 100%;
+            /*padding: 5%;
+            margin: 10px 0px;*/
+            color: #114d4d;
+
+
+
+        }
 
     </style>
+
 </head>
 <body>
 
@@ -66,29 +106,53 @@
     <div class="navigator top">
         <a href="index.html">Forside</a>
         <a href="counter.html">Counter</a>
-        <a class = "opskrifter" href="recipes.html">Opskrifter</a>
+        <a class = "opskrifter" href="recipes.html">Tøm Køleskabet</a>
         <a href="tips.html">Gode Råd / Tips</a>
+    </div>
+
+
+    <div class="tekst">
+
+        <h1>Gør dit for at reducere madspild i dit hjem</h1>
+
+    </div>
+
+    <div class="tekst">
+        <p>Lad os mindske madspild</p>
+        <p>Her er tips og træks til tøm dit køleskab</p>
     </div>
 
 
     <div class="box snacks">
        <!-- <header>Snacks</header> -->
-        <div class="ret ret1">
+        <div class="ret">
             <img src="../static/rodfrugtchips.jpeg" height="160px" width="150px" class="center">
             <p>Rodfrugtschips</p>
-            <hr style="height:2px;width:100px;border-width:0;text-align:center; background-color: sandybrown">
+
+            <hr>
+            <p class="indgredienser">Rodfrugter <br>Olie <br>Salt <br></p>
+
+            <footer><a href = "madspildsopskrifter.html">OPSKRIFT</a></footer>
+
+
         </div>
 
         <div class="ret ret2">
             <img src="../static/Hjemmelavetrugbrødschips.jpeg" height="160px" width="150px" class="center">
             <p>Rugbrødschips</p>
-            <hr style="height:2px;width:100px;border-width:0;text-align:center; background-color: sandybrown">
+            <hr>
+            <p class="indgredienser">Rugbrød<br>Olie <br>Salt <br></p>
+
+            <footer><a href = "madspildsopskrifter.html">OPSKRIFT</a></footer>
+
         </div>
 
         <div class="ret ret3">
             <img src="../static/Gnavegroent-2.jpeg" height="160px" width="150px" class="center">
-            <p>Gnave grønt</p>
-            <hr style="height:2px;width:100px;border-width:0;text-align:center; background-color: sandybrown">
+            <p>Gnavegrønt</p>
+            <hr>
+            <p class="indgredienser">Grøntsager <br><br><br></p>
+            <footer><a href = "madspildsopskrifter.html">OPSKRIFT</a></footer>
         </div>
 
     </div>
@@ -96,16 +160,57 @@
 
     <div class="box varme-retter">
        <!-- <header>Varme Retter</header> -->
-        <div class="ret ret4">WOK</div>
-        <div class="ret ret5">Biksemad</div>
-        <div class="ret ret6">Grønsager og kylling i fad</div>
-        <div class="ret ret7">Mexi wraps</div>
+        <div class="ret ret4">
+            <img src="../static/wok.jpeg" height="130px" width="150px" class="center">
+            <p>Wok</p>
+            <hr>
+            <p class="indgredienser">Grøntsager <br>Kylling <br>Nudler <br></p>
+            <footer><a href = "madspildsopskrifter.html">OPSKRIFT</a></footer>
+        </div>
+
+        <div class="ret ret5">
+            <img src="../static/Biksemad.jpeg" height="160px" width="150px" class="center">
+            <p>Biksemad</p>
+            <hr>
+            <p class="indgredienser">Rodfrugter <br>Kødrester <br>Krydderier <br>Æg</p>
+            <footer><a href = "madspildsopskrifter.html">OPSKRIFT</a></footer>
+        </div>
+
+        <div class="ret ret6">
+            <img src="../static/kylling%20i%20fad.jpeg" height="140px" width="150px" class="center">
+            <p>Fadret</p>
+            <hr>
+            <p class="indgredienser">Kylling <br>Grøntsager <br>Krydderier <br></p>
+            <footer><a href = "madspildsopskrifter.html">OPSKRIFT</a></footer>
+        </div>
+
+        <div class="ret ret7">
+            <img src="../static/wrap.jpeg" height="160px" width="150px" class="center">
+            <p>Wrap</p>
+            <hr>
+            <p class="indgredienser">Grøntsager <br>Pålæg/Kød <br>Madpandekage</p>
+            <footer><a href = "madspildsopskrifter.html">OPSKRIFT</a></footer>
+        </div>
+
     </div>
 
     <div class="box jeg-må-godt">
        <!--  <header>..."jeg må godt"</header> -->
-        <div class="ret ret8">Frugtsalat</div>
-        <div class="ret ret9">Smoothie</div>
+        <div class="ret ret8">
+            <img src="../static/frugtsalat.jpeg" height="160px" width="150px" class="center">
+            <p>Frugtsalat</p>
+            <hr>
+            <p class="indgredienser">Frugt <br> <span style="color: sandybrown;">evt:</span> <br> Skyr <br>Råcreme <br>Chokolade</p>
+            <footer><a href = "madspildsopskrifter.html">OPSKRIFT</a></footer>
+        </div>
+
+        <div class="ret ret9">
+            <img src="../static/smoothie.jpeg" height="160px" width="150px" class="center">
+            <p>Smoothie</p>
+            <hr>
+            <p class="indgredienser">Frugt/Grønt <br> <span style="color: sandybrown;">evt:</span> <br>Mælk/Skyr <br>Juice</p>
+            <footer><a href = "madspildsopskrifter.html">OPSKRIFT</a></footer>
+        </div>
     </div>
 
 
