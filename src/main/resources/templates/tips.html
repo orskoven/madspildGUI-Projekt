@@ -31,6 +31,86 @@
         .titel{
             font-size: 30px;
         }
+        .animation-banana {
+            position: relative;
+            animation: mymove 50s infinite;
+        }
+        #div1{
+            position: relative;
+            animation: mymove 50s infinite;
+        }
+
+        #div2{
+            position: relative;
+            animation: mymove 50s infinite;
+        }
+        #div3{
+            position: relative;
+            animation: mymove 50s infinite;
+          }
+        #div4{
+            position: relative;
+            animation: mymove 50s infinite;
+        }
+        #div5{
+            position: relative;
+            animation: mymove 50s infinite;
+        }
+
+
+
+        #div1 {animation:spin 20s linear infinite;}
+        #div2 {  animation:spin 20s ease infinite;}
+        #div3 { animation:spin 40s ease-out infinite;}
+        #div4 {animation:spin2 60s ease-in infinite;}
+        #div5 {animation:spin2 40s ease-in-out infinite;}
+
+
+        @keyframes spin {
+            100% {
+                -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
+        @keyframes spin2 {
+            100% {
+                -webkit-transform: rotate(-360deg);
+                transform: rotate(-360deg);
+            }
+        }
+
+        @keyframes mymove {
+            from {
+               top: -400px;
+            }
+            to {
+                top: 2500px;
+
+            }
+        }
+        .titleboxes{
+            margin: -290px 0px;
+            background-color: beige;
+            padding: 1000px 0px;
+            display: flex;
+            flex-direction: row;
+        }
+        .elem{
+            position: relative;
+            background-color: lightsalmon;
+            margin: -900px 25px;
+            padding: 10px 10px;
+        }
+        .elem:hover {animation:spin2 0.001s ease-in-out infinite;}
+
+        @keyframes spin2 {
+            100% {
+                -webkit-transform: rotate(-360deg);
+                transform: rotate(-360deg);
+            }
+        }
+
+
 
     </style>
 </head>
@@ -48,8 +128,17 @@
     </div>
 
 
-
 </div>
-
+<div class="animation-banana">
+            <img src="icon-carrot-615489b8be6ec.png" id="div1" style="position: center" alt="icon-carrot-615489b8be6ec.png">
+    <img src="icon-carrot-615489b8be6ec.png" id="div2" alt="icon-carrot-615489b8be6ec.png" />
+        <img src="icon-carrot-615489b8be6ec.png" id="div3" alt="icon-carrot-615489b8be6ec.png"/>
+<img src="icon-carrot-615489b8be6ec.png" id="div4" alt="icon-carrot-615489b8be6ec.png"/>
+<img src="icon-carrot-615489b8be6ec.png" id="div5" alt="icon-carrot-615489b8be6ec.png"/>
+</div>
+<div class="titleboxes">
+    <div id="box1">
+    </div>
+     </div>
 </body>
 </html>
