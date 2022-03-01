@@ -56,7 +56,39 @@
             font-family: "Arial Black";
             font-size: 400%;
         }
+        .animation-banana {
+            display: flex;
+            justify-content: space-around;
+            position: relative;
+            animation: mymove 50s infinite;
+        }
+        #gul1{
+            color: #114d4d;
+            text-decoration: none;
+            font-family: "Arial Black";
+            position: relative;
+            animation: mymove 50s infinite;
+        }
+        #div2{
+            position: relative;
+            animation: mymove 50s infinite;
+        }
 
+        #gul1 {animation:spin 20s linear infinite;}
+        #div2 {  animation:spin2 10s ease infinite;}
+
+        @keyframes spin2 {
+            100% {
+                -webkit-transform: rotate(-360deg);
+                transform: rotate(-360deg);
+            }
+        }
+        @keyframes spin {
+            100% {
+                -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
     </style>
 </head>
 <body>
@@ -97,6 +129,12 @@
     </script>
 </div>
 </div>
-
+<div class="animation-banana">
+    <div id="gul1">
+    <img src="icon-carrot-615489b8be6ec.png" id="div1" style="position: center" alt="icon-carrot-615489b8be6ec.png">
+        <h3 class="linkTo">DIG</h3>
+    </div>
+    </div>
+</div>
 </body>
 </html>
