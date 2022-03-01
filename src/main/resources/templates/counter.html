@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <title>Counter</title>
     <style>
-
         .navigator{
             background-color: beige;
             display: flex;
@@ -47,18 +46,67 @@
             color: black;
         }
 
+        #counter a.counter {
+            color: sandybrown;
+        }
+
+        .counter-stuff{
+            color: #114d4d;
+            text-decoration: none;
+            font-family: "Arial Black";
+            font-size: 200%;
+        }
+        .animation-banana {
+            display: flex;
+            justify-content: space-around;
+            position: relative;
+            animation: mymove 1s infinite;
+        }
+        #gul1{
+            color: #114d4d;
+            text-decoration: none;
+            font-family: "Arial Black";
+            position: relative;
+            animation: spin2;
+        }
+
+        #gul1:hover{animation:spin2 0.00001ms infinite;}
+
+        @keyframes spin2 {
+            0% {
+                -webkit-transform: rotate(-360deg);
+                transform: rotate(-120deg);
+            }
+            25% {
+                -webkit-transform: rotate(-360deg);
+                transform: rotate(90deg);
+            }
+            50% {
+                -webkit-transform: rotate(-360deg);
+                transform: rotate(-45deg);
+            }
+            75% {
+                -webkit-transform: rotate(-360deg);
+                transform: rotate(40deg);
+            }
+            100% {
+                -webkit-transform: rotate(-360deg);
+                transform: rotate(-360deg);
+            }
+        }
+
+
     </style>
 </head>
 <body>
 
 <div class="container">
-    <header class = "titel">
-    </header>
+    <!--  <header class = "titel"> </header> -->
 
     <div class="navigator top">
         <a href="index.html">Forside</a>
-        <a class = "counter"href="counter.html">Counter</a>
-        <a href="recipes.html">Tøm Køleskabet</a>
+        <a class="counter" href="counter.html">Counter</a>
+        <a href="recipes.html">Opskrifter</a>
         <a href="tips.html">Gode Råd / Tips</a>
     </div>
 <div class="counter-stuff">
@@ -81,13 +129,14 @@
             var msInterval = INTERVAL * 1000;
             var now = new Date();
             count = parseInt((now - START_DATE)/msInterval) * INCREMENT + START_VALUE;
-            document.getElementById('counter').innerHTML = Math.round(count* 100) / 100;
-            setInterval("count += INCREMENT; document.getElementById('counter').innerHTML = Math.round(count* 100) / 100;", msInterval);
+            document.getElementById('counter').innerHTML = (Math.round(count* 100) / 100).toFixed(2);
+            setInterval("count += INCREMENT; document.getElementById('counter').innerHTML = (Math.round(count* 100) / 100).toFixed(2);", msInterval);
         }
 
     </script>
 </div>
 </div>
+<div class="counter-stuff">
 <div class="animation-banana">
     <div id="gul1">
     <img src="icon-carrot-615489b8be6ec.png" id="div1" style="position: center" alt="icon-carrot-615489b8be6ec.png">
@@ -95,16 +144,10 @@
     </div>
     </div>
 </div>
-<div class="animation-banana">
-    <div id="clockgule">
-        <div id="clockgule2">
-        <img src="icon-carrot-615489b8be6ec.png" style="position: center" alt="icon-carrot-615489b8be6ec.png">
-            </div><div id="clockgule3">
-        <img src="icon-carrot-615489b8be6ec.png" style="position: center" alt="icon-carrot-615489b8be6ec.png">
-            </div>
-    </div>
+<div class="counter-stuff">
+    Hver dag bliver der smidt næsten 2.000 tons fødevarer ud i Danmark.
 </div>
-</div>
-
+<div class="counter-stuff">
+    Det samlede madspild fra husholdningerne 261.000-ton pr. år.</div>
 </body>
 </html>
