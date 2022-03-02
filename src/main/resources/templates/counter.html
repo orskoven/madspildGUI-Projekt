@@ -56,64 +56,21 @@
             font-family: "Arial Black";
             font-size: 200%;
         }
-        .animation-banana {
-            display: flex;
-            justify-content: space-around;
+
+        .animation-carrot{
             position: relative;
-            animation: mymove 1s infinite;
-        }
-        #gul1{
-            color: #114d4d;
-            text-decoration: none;
-            font-family: "Arial Black";
-            position: relative;
-            animation: spin2;
+            float: left;
+            z-index: 10;
+            animation: mymove 4s;
         }
 
-
-        #gul1:hover{animation:spin2 0.00001ms infinite;}
-
-        @keyframes spin2 {
-            0% {
-                -webkit-transform: rotate(-360deg);
-                transform: rotate(-120deg);
-            }
-            25% {
-                -webkit-transform: rotate(-360deg);
-                transform: rotate(90deg);
-            }
-            50% {
-                -webkit-transform: rotate(-360deg);
-                transform: rotate(-45deg);
-            }
-            75% {
-                -webkit-transform: rotate(-360deg);
-                transform: rotate(40deg);
-            }
-            100% {
-                -webkit-transform: rotate(-360deg);
-                transform: rotate(-360deg);
-            }
-        }
-        #dkkort{
-            color: #114d4d;
-            text-decoration: none;
-            font-family: "Arial Black";
-            position: relative;
+        .animation-carrot{
+            animation-timing-function: ease;
         }
 
-        .flyingcarrrot{
-            position: relative;
-            size: 5px 5px;
-            animation: mymove3 5s infinite;
-        }
-
-
-        @keyframes mymove3 {
-            0% {margin: 0px 0px;}
-            20% {margin: 10px 10px;}
-            100% {margin: 20px 20px;}
-
+        @keyframes mymove {
+            0%{top: 0px; top:0px}
+            100%{top: 1000px; top:1000px}
         }
 
 
@@ -178,7 +135,7 @@
 
 <div class="animation-carrot">
     <div id="guloneone">
-    <img src="gulerodvandret.png" alt="gulerodvandret.png">
+    <img src="gulerodvandret.png" id="gulone" alt="gulerodvandret.png">
     </div>
     </div>
 <div class="counter-stuff">
