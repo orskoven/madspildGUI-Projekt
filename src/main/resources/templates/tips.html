@@ -147,7 +147,7 @@
             align-content: center;
             width: 150px;
             border: #114d4d solid ;
-            margin: -955px 950px;
+            margin: -60% 60%;
             height: 500px;
             width: 15%;
         }
@@ -203,9 +203,9 @@
             width: 150px;
             border: #114d4d solid;
             display: block;
-            margin: -355px -1468px;
-            width: 30%;
-            height: 30%;
+            margin: -10% -90%;
+            width: 25%;
+            height: 25%;
             background-color: floralwhite;
 
         }
@@ -217,11 +217,27 @@
         }
 
         .garbage-can{
-            margin: auto 580px;
+            position: relative;
             float: left;
             flex: 0 0 auto;
             width: 150px;
             height: 1010px;
+            animation: mymove3 20s infinite ;
+        }
+        .garbage-can{animation-timing-function: linear}
+
+        @keyframes mymove3 {
+            0%{top: 0px}
+            50% {
+                -webkit-transform: rotate(20deg);
+                transform: rotate(20deg);
+            }
+            80% {
+                -webkit-transform: rotate(-20deg);
+                transform: rotate(-20deg);
+            }
+            100%{lef: 2500px}
+
         }
 
         .too-good-to-go a{
@@ -245,8 +261,8 @@
         }
 
         .link{
-            margin: -42px 415px;
-
+            margin: auto;
+            float: left;
         }
 
 
@@ -308,7 +324,7 @@
                 Få inspiration til forskellige opskrifter
             </p>
         <div class="link">
-            <a href ="recipes.html"> her.</a>
+            <a href ="recipes.html" id="herlink"> her.</a>
         </div>
     <br>
         <br>
