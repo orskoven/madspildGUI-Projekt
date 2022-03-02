@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Tæller</title>
+    <title>Vidste du? | Danmark Mod Madspild </title>
     <style>
         .navigator{
             background-color: beige;
@@ -173,7 +173,7 @@
 
     <div class="navigator top">
         <a href="index.html">Forside</a>
-        <a class="counter" href="counter.html">Tæller</a>
+        <a class="counter" href="counter.html">Vidste du?</a>
         <a href="recipes.html">Tøm Køleskabet</a>
         <a href="tips.html">Gode Råd / Tips</a>
     </div>
@@ -226,7 +226,7 @@
             var now2 = new Date();
             countMONEY = parseInt((now2 - START_DATEMONEY)/msInterval2) * INCREMENTMONEY + START_VALUEMONEY;
             document.getElementById('countermoney').innerHTML = (Math.round(countMONEY* 100) / 100).toFixed(2);
-            setInterval("countMONEY += INCREMENTMONEY; document.getElementById('countermoney').innerHTML = (Math.round(countMONEY* 100) / 100).toFixed(2);", msInterval2);}
+            setInterval("countMONEY += INCREMENTMONEY; document.getElementById('countermoney').innerHTML = (Math.round(countMONEY* 100) / 100).toFixed(0);", msInterval2);}
         window.onload = function ()
         {
             fun1();
