@@ -29,9 +29,121 @@
             color: sandybrown;
         }
 
-        .titel{
-            font-size: 30px;
+        .boks1{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
         }
+
+        .tekst{
+            margin-top: 3%;
+            margin-left: 2.5%;
+            width: 40%;
+            font-size: 50px;
+            font-family: "Arial Black";
+            background-color: white;
+            color: #114d4d;
+        }
+
+        .counter{
+            font-family: "Arial";
+            margin-top: 5%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 50%;
+            color: #114d4d;
+            font-size: 50px;
+            line-height: 0;
+            height: 30%;
+
+        }
+
+        #counter{
+            margin-bottom: 5%;
+            font-size: 100px;
+            font-family: "Arial Black";
+        }
+
+        .boks2{
+            font-family: Arial;
+            margin-top: 5%;
+            background-color: beige;
+            flex-direction: row;
+            font-size: 25px;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .tekst1{
+            font-size: 35px;
+            color: #114d4d;
+            font-family: Arial;
+            padding-top: 2.5%;
+            padding-bottom: 2.5%;
+            padding-left: 1.5%;
+            width: 50%;
+            font-style: italic;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+        }
+
+        .tekst1-1{
+            color: #114d4d;
+            font-family: "Arial Black";
+            padding-top: 2%;
+            padding-bottom: 2.5%;
+            padding-right: 1.5%;
+            width: 50%;
+            font-size: 35px;
+            line-height: 1;
+        }
+
+        .linje2{
+            font-family: Arial;
+            font-size: 25px;
+        }
+
+        a{
+            color: #114d4d;
+            text-decoration: none;
+            font-family: "Arial Black";
+            font-size: 16px;
+            display: flex;
+            justify-content: flex-end;
+            padding-right:10%;
+        }
+
+        .boks3{
+            display: flex;
+            flex-direction: row;
+            margin-top: 5%;
+            width: 100%;
+        }
+
+        .tekst2 {
+            font-size: 35px;
+            color: #114d4d;
+            font-family: Arial;
+            padding-top: 2.5%;
+            padding-bottom: 2.5%;
+            padding-left: 1.5%;
+            width: 50%;
+            font-style: italic;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .tekst2-2{
+            width: 50%;
+            display: flex;
+            justify-content: center;
+        }
+
+        
 
     </style>
 
@@ -43,14 +155,104 @@
 
     <div class="navigator top">
         <a class="index" href="index.html">Forside</a>
-        <a href="counter.html">Tæller</a>
+        <a href="counter.html">Vidste du?</a>
         <a href="recipes.html">Tøm Køleskabet</a>
         <a href="tips.html">Gode Råd / Tips</a>
+    </div>
+
+    <div class="boks1">
+        <div class="tekst">
+            <p>Madspild er fødevarer, der kunne være spist, men som i stedet går til spilde</p>
+        </div>
+
+        <div class="counter">
+            <p id="counter">
+            </p>
+            <p id="infocounter">
+                TONS MADSPILD I ÅR
+            </p>
+            <!-- hentet på https://stackoverflow.com/questions/31176605/how-to-make-real-time-count-up-with-javascript -->
+            <script>
+                var d = new Date();
+                var START_DATEDAG = new Date(d.toDateString()); // put in the starting date here
+                var INTERVALDAG = 1; // in seconds
+                var INCREMENTDAG = 0.02; // increase per tick
+                var START_VALUEDAG = 0; // initial value when it's the start date
+                var countDAG = 0;
+                var START_DATE = new Date("Januar 1, "+ d.getFullYear() +" 00:00:00"); // put in the starting date here
+                var INTERVAL = 1; // in seconds
+                var INCREMENT = 0.02; // increase per tick
+                var START_VALUE = 0; // initial value when it's the start date
+                var count = 0;
+
+                function fun1()
+                {
+                    var msInterval = INTERVAL * 1000;
+                    var now = new Date();
+                    count = parseInt((now - START_DATE)/msInterval) * INCREMENT + START_VALUE;
+                    document.getElementById('counter').innerHTML = (Math.round(count* 100) / 100).toFixed(2);
+                    setInterval("count += INCREMENT; document.getElementById('counter').innerHTML = (Math.round(count* 100) / 100).toFixed(2);", msInterval);}
+
+                function fun2()
+                {
+                    var msInterval1 = INTERVALDAG * 1000;
+                    var now1 = new Date();
+                    countDAG = parseInt((now1 - START_DATEDAG)/msInterval1) * INCREMENTDAG + START_VALUEDAG;
+                    document.getElementById('counterdag').innerHTML = (Math.round(count* 100) / 100).toFixed(2);
+                    setInterval("countDAG += INCREMENTDAG; document.getElementById('counterdag').innerHTML = (Math.round(countDAG* 100) / 100).toFixed(2);", msInterval1);}
+
+                window.onload = function ()
+                {
+                    fun1();
+                    fun2();
+                }
+            </script>
+        </div>
     </div>
 
     <!-- Måske tekst der kan bruges:
     <p>Madspild er fødevarer, der kunne være spist, men som i stedet går til spilde.</p>
     -->
+    <div class="boks2">
+
+        <div class="tekst1">
+            <p>"Spis det du har, før du køber nyt"</p>
+        </div>
+
+        <div class="tekst1-1">
+            <p class="linje1">Har du rester liggende og ved du ikke hvordan du skal bruge dem?</p>
+            <p class="linje2">Vi har samlet et udvalg af opskrifter, som kan hjælpe dig med at tømme dit køleskab</p>
+
+            <div>
+                <a href="recipes.html"><span style="color: sandybrown">Læs opskrifter her</span></a>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="boks3">
+
+        
+        <div class="tekst2-2">
+            <img src="../static/madspild.png" width="750" height="400">
+        </div>
+
+        <div class="tekst2">
+            <p>Hver dansker smider i gennemsnit 63kg mad i skraldespanden</p>
+            <p>Næsten 50% af alt spild på kloden, er madspild</p>
+
+            <div>
+                <a href="counter.html"><span style="color: sandybrown">Læs mere her</span></a>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="boks4">
+
+    </div>
 
 
 
