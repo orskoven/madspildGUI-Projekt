@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <title>Counter</title>
     <style>
-
         .navigator{
             background-color: beige;
             display: flex;
@@ -47,18 +46,97 @@
             color: black;
         }
 
+        #counter a.counter {
+            color: sandybrown;
+        }
+
+        .counter-stuff{
+            color: #114d4d;
+            text-decoration: none;
+            font-family: "Arial Black";
+            font-size: 200%;
+        }
+        .animation-banana {
+            display: flex;
+            justify-content: space-around;
+            position: relative;
+            animation: mymove 1s infinite;
+        }
+        #gul1{
+            color: #114d4d;
+            text-decoration: none;
+            font-family: "Arial Black";
+            position: relative;
+            animation: spin2;
+        }
+
+
+        #gul1:hover{animation:spin2 0.00001ms infinite;}
+
+        @keyframes spin2 {
+            0% {
+                -webkit-transform: rotate(-360deg);
+                transform: rotate(-120deg);
+            }
+            25% {
+                -webkit-transform: rotate(-360deg);
+                transform: rotate(90deg);
+            }
+            50% {
+                -webkit-transform: rotate(-360deg);
+                transform: rotate(-45deg);
+            }
+            75% {
+                -webkit-transform: rotate(-360deg);
+                transform: rotate(40deg);
+            }
+            100% {
+                -webkit-transform: rotate(-360deg);
+                transform: rotate(-360deg);
+            }
+        }
+        #dkkort{
+            color: #114d4d;
+            text-decoration: none;
+            font-family: "Arial Black";
+            position: relative;
+        }
+
+        .flyingcarrrot{
+            position: relative;
+            size: 5px 5px;
+            animation: mymove3 5s infinite;
+        }
+
+
+        @keyframes mymove3 {
+            0% {margin: 0px 0px;}
+            20% {margin: 10px 10px;}
+            100% {margin: 20px 20px;}
+
+        }
+
+        #div0 {animation-timing-function:linear;}
+        #div2 { animation-timing-function:ease ;}
+        #div3 { animation-timing-function: ease-out ;}
+        #div4 {animation-timing-function:  ease-in ;}
+        #div5 {animation-timing-function: ease-in-out ;}
+        #div6 {animation-timing-function: ease-in-out ;}
+        #div7 {animation-timing-function:  ease-in-out ;}
+        #div8 {animation-timing-function: ease;}
+
+
     </style>
 </head>
 <body>
 
 <div class="container">
-    <header class = "titel">
-    </header>
+    <!--  <header class = "titel"> </header> -->
 
     <div class="navigator top">
         <a href="index.html">Forside</a>
-        <a class = "counter"href="counter.html">Counter</a>
-        <a href="recipes.html">Tøm Køleskabet</a>
+        <a class="counter" href="counter.html">Counter</a>
+        <a href="recipes.html">Opskrifter</a>
         <a href="tips.html">Gode Råd / Tips</a>
     </div>
 <div class="counter-stuff">
@@ -69,25 +147,43 @@
     </p>
     <!-- hentet på https://stackoverflow.com/questions/31176605/how-to-make-real-time-count-up-with-javascript -->
     <script>
-
-        var START_DATE = new Date("Januar 1, 2022 00:00:00"); // put in the starting date here
+        var d = new Date();
+        var START_DATEDAG = new Date(d.toDateString()); // put in the starting date here
+        var INTERVALDAG = 1; // in seconds
+        var INCREMENTDAG = 0.02; // increase per tick
+        var START_VALUEDAG = 0; // initial value when it's the start date
+        var countDAG = 0;
+        var START_DATE = new Date("Januar 1, "+ d.getFullYear() +" 00:00:00"); // put in the starting date here
         var INTERVAL = 1; // in seconds
         var INCREMENT = 0.02; // increase per tick
         var START_VALUE = 0; // initial value when it's the start date
         var count = 0;
 
-        window.onload = function ()
+        function fun1()
         {
             var msInterval = INTERVAL * 1000;
             var now = new Date();
             count = parseInt((now - START_DATE)/msInterval) * INCREMENT + START_VALUE;
-            document.getElementById('counter').innerHTML = Math.round(count* 100) / 100;
-            setInterval("count += INCREMENT; document.getElementById('counter').innerHTML = Math.round(count* 100) / 100;", msInterval);
-        }
+            document.getElementById('counter').innerHTML = (Math.round(count* 100) / 100).toFixed(2);
+            setInterval("count += INCREMENT; document.getElementById('counter').innerHTML = (Math.round(count* 100) / 100).toFixed(2);", msInterval);}
 
+            function fun2()
+            {
+            var msInterval1 = INTERVALDAG * 1000;
+            var now1 = new Date();
+            countDAG = parseInt((now1 - START_DATEDAG)/msInterval1) * INCREMENTDAG + START_VALUEDAG;
+            document.getElementById('counterdag').innerHTML = (Math.round(count* 100) / 100).toFixed(2);
+            setInterval("countDAG += INCREMENTDAG; document.getElementById('counterdag').innerHTML = (Math.round(countDAG* 100) / 100).toFixed(2);", msInterval1);}
+
+        window.onload = function ()
+        {
+            fun1();
+            fun2();
+        }
     </script>
 </div>
 </div>
+<div class="counter-stuff">
 <div class="animation-banana">
     <div id="gul1">
     <img src="icon-carrot-615489b8be6ec.png" id="div1" style="position: center" alt="icon-carrot-615489b8be6ec.png">
@@ -95,16 +191,21 @@
     </div>
     </div>
 </div>
-<div class="animation-banana">
-    <div id="clockgule">
-        <div id="clockgule2">
-        <img src="icon-carrot-615489b8be6ec.png" style="position: center" alt="icon-carrot-615489b8be6ec.png">
-            </div><div id="clockgule3">
-        <img src="icon-carrot-615489b8be6ec.png" style="position: center" alt="icon-carrot-615489b8be6ec.png">
-            </div>
-    </div>
+<div class="counter-stuff">
+    Hver dag bliver der smidt næsten 2.000 tons fødevarer ud i Danmark.
+</div>
+<div class="counter-stuff">
+    <p id="counterdag">
+    </p>
+    <p id="infocounterdag">
+        TONS MADSPILD I DAG
+    </p>
+
 </div>
 </div>
 
+<div class="counter-stuff">
+    Det samlede madspild fra husholdningerne 261.000-ton pr. år.</div>
 </body>
+
 </html>
