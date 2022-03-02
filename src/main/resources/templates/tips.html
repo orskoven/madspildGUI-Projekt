@@ -217,11 +217,27 @@
         }
 
         .garbage-can{
-            margin: auto 580px;
+            position: relative;
             float: left;
             flex: 0 0 auto;
             width: 150px;
             height: 1010px;
+            animation: mymove3 20s infinite ;
+        }
+        .garbage-can{animation-timing-function: linear}
+
+        @keyframes mymove3 {
+            0%{top: 0px}
+            50% {
+                -webkit-transform: rotate(20deg);
+                transform: rotate(20deg);
+            }
+            80% {
+                -webkit-transform: rotate(-20deg);
+                transform: rotate(-20deg);
+            }
+            100%{lef: 2500px}
+
         }
 
         .too-good-to-go a{
