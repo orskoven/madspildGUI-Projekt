@@ -97,6 +97,11 @@
     <!-- hentet på https://stackoverflow.com/questions/31176605/how-to-make-real-time-count-up-with-javascript -->
     <script>
         var d = new Date();
+        var START_DATEMONEY = new Date("Januar 1, "+ d.getFullYear() +" 00:00:00"); // put in the starting date here
+        var INTERVALMONEY = 1; // in seconds
+        var INCREMENTMONEY = 428.082191781; // increase per tick
+        var START_VALUEMONEY = 0; // initial value when it's the start date
+        var countMONEY = 0;
         var START_DATEDAG = new Date(d.toDateString()); // put in the starting date here
         var INTERVALDAG = 1; // in seconds
         var INCREMENTDAG = 0.02; // increase per tick
@@ -124,10 +129,18 @@
             document.getElementById('counterdag').innerHTML = (Math.round(count* 100) / 100).toFixed(2);
             setInterval("countDAG += INCREMENTDAG; document.getElementById('counterdag').innerHTML = (Math.round(countDAG* 100) / 100).toFixed(2);", msInterval1);}
 
+        function fun3()
+        {
+            var msInterval2 = INTERVALMONEY * 1000;
+            var now2 = new Date();
+            countMONEY = parseInt((now2 - START_DATEMONEY)/msInterval2) * INCREMENTMONEY + START_VALUEMONEY;
+            document.getElementById('countermoney').innerHTML = (Math.round(countMONEY* 100) / 100).toFixed(2);
+            setInterval("countMONEY += INCREMENTMONEY; document.getElementById('countermoney').innerHTML = (Math.round(countMONEY* 100) / 100).toFixed(2);", msInterval2);}
         window.onload = function ()
         {
             fun1();
             fun2();
+            fun3();
         }
     </script>
 </div>
@@ -153,6 +166,17 @@
 
 <div class="counter-stuff">
     Det samlede madspild fra husholdningerne 261.000-ton pr. år.</div>
+</body>
+<div class="counter-stuff">
+    <p id="countermoney">
+    </p>
+    <p id="infocountermoney">
+        KRONER HAR DET KOSTET DANSKERNE I ÅR
+    </p>
+
+</div>
+<div class="counter-stuff">
+    Der svarer til 428 kr. i sekundet.</div>
 </body>
 
 </html>
