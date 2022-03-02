@@ -10,7 +10,7 @@
             flex-direction: row;
             justify-content: space-around;
             padding: 20px;
-            margin: 10px 0px;
+            margin: 0px 0px;
         }
 
         .navigator a{
@@ -54,7 +54,7 @@
             color: #114d4d;
             text-decoration: none;
             font-family: "Arial Black";
-            font-size: 200%;
+            font-size: 250%;
         }
 
         .animation-carrot{
@@ -73,11 +73,76 @@
             100%{top: 1000px; top:1000px}
         }
 
+        .animation-banana {
+            margin: -162px;
+            position: relative;
+            animation: mymove 50s infinite;
+        }
+        #div1{
+            position: relative;
+            animation: mymove 50s infinite;
+        }
 
+        #div2{
+            position: relative;
+            animation: mymove 50s infinite;
+        }
+        #div3{
+            position: relative;
+            animation: mymove 50s infinite;
+        }
+        #div4{
+            position: relative;
+            animation: mymove 50s infinite;
+        }
+        #div5{
+            position: relative;
+            animation: mymove 50s infinite;
+        }
+
+
+
+        #div1 {animation:spin 20s linear infinite;}
+        #div2 {  animation:spin 20s ease infinite;}
+        #div3 { animation:spin 40s ease-out infinite;}
+        #div4 {animation:spin2 60s ease-in infinite;}
+        #div5 {animation:spin2 40s ease-in-out infinite;}
+
+
+        @keyframes spin {
+            100% {
+                -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
+        @keyframes spin2 {
+            100% {
+                -webkit-transform: rotate(-360deg);
+                transform: rotate(-360deg);
+            }
+        }
+
+        @keyframes mymove {
+            from {
+                top: -400px;
+            }
+            to {
+                top: 2500px;
+
+            }
+        }
 
     </style>
+    <div class="animation-banana">
+        <img src="beetroot-2.png" id="div1" alt="beetroot-2.png">
+        <img src="beetroot-2.png" id="div2" alt="beetroot-2.png" />
+        <img src="icon-carrot-615489b8be6ec.png" id="div3" alt="icon-carrot-615489b8be6ec.png"/>
+        <img src="icon-carrot-615489b8be6ec.png" id="div4" alt="icon-carrot-615489b8be6ec.png"/>
+        <img src="icon-carrot-615489b8be6ec.png" id="div5" alt="icon-carrot-615489b8be6ec.png"/>
+    </div>
 </head>
 <body>
+
 
 <div class="container">
     <!--  <header class = "titel"> </header> -->
@@ -88,6 +153,9 @@
         <a href="recipes.html">Opskrifter</a>
         <a href="tips.html">Gode Råd / Tips</a>
     </div>
+</div>
+
+
 <div class="counter-stuff">
     <p id="counter">
     </p>
@@ -145,12 +213,6 @@
     </script>
 </div>
 </div>
-
-<div class="animation-carrot">
-    <div id="guloneone">
-    <img src="gulerodvandret.png" id="gulone" alt="gulerodvandret.png">
-    </div>
-    </div>
 <div class="counter-stuff">
     Hver dag bliver der smidt næsten 2.000 tons fødevarer ud i Danmark.
 </div>
