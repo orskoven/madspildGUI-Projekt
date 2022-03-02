@@ -39,20 +39,20 @@
             color: #114d4d;
             font-family: "Arial Black";
             font-size: 18px;
+            /*margin-top: 1%;*/
 
 
         }
 
         .ret{
-            background-color: white;
             display: flex;
             flex-direction: column;
-            padding: 25px 70px;
+            padding: 5% 10%;
             text-align: center;
-            align-content: center;
-            width: 150px;
-            border: #114d4d solid ;
-
+            align-items: center;
+            width: 3%;
+            border: #114d4d solid;
+            background-color:#ffffffbd;  /* Eller skal den være hvid?*/
         }
 
         hr{
@@ -81,19 +81,100 @@
             align-items: flex-end;
         }
 
-        .tekst{
+        .tekst1{
             display: flex;
-            background-color: sandybrown;
+
             font-family: "Arial Black";
             font-size:20px;
-            font-style: italic;
-            width: 100%;
-            /*padding: 5%;
-            margin: 10px 0px;*/
             color: #114d4d;
 
 
+            width: 100%;
+            justify-content: center;
 
+
+        }
+        .tekst2{
+            display: flex;
+
+            font-family: "Arial";
+            font-size:20px;
+            /*font-style: italic;    skal det stå med kursiv i intro */
+
+
+            flex-direction: row;
+            justify-content: center;
+            width: 100%;
+            color: #114d4d;
+            flex-direction: column;
+
+        }
+
+        .tekst2 p{
+            display: flex;
+            font-family: "Arial";
+            font-size:20px;
+            color: #114d4d;
+            justify-content: center;
+            line-height: 0%;
+
+        }
+
+        .citatbox{
+            display: flex;
+            justify-content: center;
+            padding: 2.5%;
+        }
+
+        .citatbox p{
+            margin: 0.5%;
+            display: flex;
+            font-family: "Arial Black";
+            font-size:20px;
+            color: #114d4d;
+            width: 100%;
+
+        }
+
+        .citatbox1{
+            display: flex;
+            padding: 2.5% 8%;
+
+        }
+
+        .citatbox1 p{
+            margin: 0.5%;
+            display: flex;
+            font-family: "Arial Black";
+            font-size:20px;
+            color: #114d4d;
+            width: 100%;
+            font-style: italic;
+        }
+
+        .citat{
+            font-style: italic;
+            width: 50%;
+        }
+
+        .citat1{
+            font-style: italic;
+            width: 50%;
+        }
+
+        .citat2{
+            font-style: italic;
+            width: 50%;
+        }
+
+        .overskrift{
+            border: #114d4d solid;
+            font-family: "Arial Black";
+            padding: 0.5% 4%;
+            width: 4%;
+            margin-left: 3%;
+            display: flex;
+            justify-content: center;
         }
 
     </style>
@@ -112,22 +193,31 @@
     </div>
 
 
-    <div class="tekst">
+        <div class="tekst1">
 
-        <h1>Gør dit for at reducere madspild i dit hjem</h1>
+            <h1>Gør dit for at reducere madspild i dit hjem</h1>
 
-    </div>
+        </div>
 
-    <div class="tekst">
-        <p>Lad os mindske madspild</p>
-        <p>Her er tips og træks til tøm dit køleskab</p>
-    </div>
+        <div class="tekst2">
+
+            <!-- <p>"Brug det du har liggende i stedet for at købe ny"</p>  -->
+            <p>Få inspiration til resterne i dit køleskab med disse opskrifter</p>
+
+        </div>
+
+
+
+
+    <!--<div class="overskrift">
+        <p>Snacks</p>
+    </div>-->
 
 
     <div class="box snacks">
-       <!-- <header>Snacks</header> -->
         <div class="ret">
-            <img src="../static/rodfrugtchips.jpeg" height="160px" width="150px" class="center">
+
+            <img src="rodfrugtchips.jpeg" height="160px" width="150px" class="center">
             <p>Rodfrugtschips</p>
 
             <hr>
@@ -139,7 +229,7 @@
         </div>
 
         <div class="ret ret2">
-            <img src="../static/Hjemmelavetrugbrødschips.jpeg" height="160px" width="150px" class="center">
+            <img src="Hjemmelavetrugbrødschips.jpeg" height="160px" width="150px" class="center">
             <p>Rugbrødschips</p>
             <hr>
             <p class="indgredienser">Rugbrød<br>Olie <br>Salt <br></p>
@@ -157,6 +247,18 @@
         </div>
 
     </div>
+
+    <div class="citatbox">
+
+        <div class="citat">
+             <p>"Reducering af madspild er en af de vigtigste ting vi kan gøre for at arbejde med den globale opvarmning"</p>
+            <footer>- Tine, direktør Danmark mod madspild</footer>
+        </div>
+
+
+
+    </div>
+
 
 
     <div class="box varme-retter">
@@ -191,6 +293,20 @@
             <hr>
             <p class="indgredienser">Grøntsager <br>Pålæg/Kød <br>Madpandekage</p>
             <footer><a href = "madspildsopskrifter.html">OPSKRIFT</a></footer>
+        </div>
+
+    </div>
+
+    <div class="citatbox1">
+
+        <div class="citat1">
+            <p>"Rester kan faktisk være lækkert"</p>
+            <footer> - Jørgen, 54 år, Familie far </footer>
+        </div>
+
+        <div class="citat2">
+            <p> "Jeres fadret-opskrift gjorde at jeg ikke smider rodfruger ud mere. TAK!!" </p>
+            <footer> - Karen, 22 år, Studerende </footer>
         </div>
 
     </div>
