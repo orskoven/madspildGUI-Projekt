@@ -220,7 +220,7 @@
             var now2 = new Date();
             countMONEY = parseInt((now2 - START_DATEMONEY)/msInterval2) * INCREMENTMONEY + START_VALUEMONEY;
             document.getElementById('countermoney').innerHTML = (Math.round(countMONEY* 100) / 100).toFixed(2);
-            setInterval("countMONEY += INCREMENTMONEY; document.getElementById('countermoney').innerHTML = (Math.round(countMONEY* 100) / 100).toFixed(2);", msInterval2);}
+            setInterval("countMONEY += INCREMENTMONEY; document.getElementById('countermoney').innerHTML = Math.round(countMONEY* 100) / 100;", msInterval2);}
         window.onload = function ()
         {
             fun1();
