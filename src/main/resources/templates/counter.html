@@ -2,16 +2,38 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Counter</title>
+    <title>Tæller</title>
     <style>
-
-        #counter{
+        .navigator{
             background-color: beige;
             display: flex;
             flex-direction: row;
             justify-content: space-around;
             padding: 20px;
             margin: 10px 0px;
+        }
+
+        .navigator a{
+            color: #114d4d;
+            text-decoration: none;
+            font-family: "Arial Black";
+        }
+
+        .navigator a:hover {
+            color: black;
+        }
+
+        .navigator a.counter {
+            color: sandybrown;
+        }
+
+        .counter-stuff{
+            background-color: beige;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            padding: 20px;
+            margin: 25px 0px;
         }
 
         #counter a{
@@ -28,55 +50,152 @@
             color: sandybrown;
         }
 
-        #counter{
-            font-size: 30px;
+        .counter-stuff{
+            color: #114d4d;
+            text-decoration: none;
+            font-family: "Arial Black";
+            font-size: 200%;
         }
+        .animation-banana {
+            display: flex;
+            justify-content: space-around;
+            position: relative;
+            animation: mymove 1s infinite;
+        }
+        #gul1{
+            color: #114d4d;
+            text-decoration: none;
+            font-family: "Arial Black";
+            position: relative;
+            animation: spin2;
+        }
+
+
+        #gul1:hover{animation:spin2 0.00001ms infinite;}
+
+        @keyframes spin2 {
+            0% {
+                -webkit-transform: rotate(-360deg);
+                transform: rotate(-120deg);
+            }
+            25% {
+                -webkit-transform: rotate(-360deg);
+                transform: rotate(90deg);
+            }
+            50% {
+                -webkit-transform: rotate(-360deg);
+                transform: rotate(-45deg);
+            }
+            75% {
+                -webkit-transform: rotate(-360deg);
+                transform: rotate(40deg);
+            }
+            100% {
+                -webkit-transform: rotate(-360deg);
+                transform: rotate(-360deg);
+            }
+        }
+        #dkkort{
+            color: #114d4d;
+            text-decoration: none;
+            font-family: "Arial Black";
+            position: relative;
+        }
+
+        .flyingcarrrot{
+            position: relative;
+            size: 5px 5px;
+            animation: mymove3 5s infinite;
+        }
+
+
+        @keyframes mymove3 {
+            0% {margin: 0px 0px;}
+            20% {margin: 10px 10px;}
+            100% {margin: 20px 20px;}
+
+        }
+
+
 
     </style>
 </head>
 <body>
 
 <div class="container">
-    <header class = "titel">
-    </header>
-    <p id="demo" style="color: transparent"></p>
+    <!--  <header class = "titel"> </header> -->
+
+    <div class="navigator top">
+        <a href="index.html">Forside</a>
+        <a class="counter" href="counter.html">Tæller</a>
+        <a href="recipes.html">Opskrifter</a>
+        <a href="tips.html">Gode Råd / Tips</a>
+    </div>
+<div class="counter-stuff">
     <p id="counter">
     </p>
+    <p id="infocounter">
+         TONS MADSPILD I ÅR
+    </p>
+    <!-- hentet på https://stackoverflow.com/questions/31176605/how-to-make-real-time-count-up-with-javascript -->
     <script>
-        let startYear = 227000;
-        let perDay = 0.023;
-        // Set the date we're counting down to
-        var countDownDate = new Date("Jan 5, 4000 15:37:25").getTime();
+        var d = new Date();
+        var START_DATEDAG = new Date(d.toDateString()); // put in the starting date here
+        var INTERVALDAG = 1; // in seconds
+        var INCREMENTDAG = 0.02; // increase per tick
+        var START_VALUEDAG = 0; // initial value when it's the start date
+        var countDAG = 0;
+        var START_DATE = new Date("Januar 1, "+ d.getFullYear() +" 00:00:00"); // put in the starting date here
+        var INTERVAL = 1; // in seconds
+        var INCREMENT = 0.02; // increase per tick
+        var START_VALUE = 0; // initial value when it's the start date
+        var count = 0;
 
-        // Update the count down every 1 second
-        var x = setInterval(function() {
+        function fun1()
+        {
+            var msInterval = INTERVAL * 1000;
+            var now = new Date();
+            count = parseInt((now - START_DATE)/msInterval) * INCREMENT + START_VALUE;
+            document.getElementById('counter').innerHTML = (Math.round(count* 100) / 100).toFixed(2);
+            setInterval("count += INCREMENT; document.getElementById('counter').innerHTML = (Math.round(count* 100) / 100).toFixed(2);", msInterval);}
 
-            // Get today's date and time
-            var now = new Date().getTime();
+            function fun2()
+            {
+            var msInterval1 = INTERVALDAG * 1000;
+            var now1 = new Date();
+            countDAG = parseInt((now1 - START_DATEDAG)/msInterval1) * INCREMENTDAG + START_VALUEDAG;
+            document.getElementById('counterdag').innerHTML = (Math.round(count* 100) / 100).toFixed(2);
+            setInterval("countDAG += INCREMENTDAG; document.getElementById('counterdag').innerHTML = (Math.round(countDAG* 100) / 100).toFixed(2);", msInterval1);}
 
-            // Find the distance between now and the count down date
-            var distance = countDownDate - now;
-
-            // Time calculations for days, hours, minutes and seconds
-            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            var seconds = 0.0000000023;
-
-            // Display the result in the element with id="demo"
-            document.getElementById("demo").innerHTML = days + "d " + hours + "h "
-                + minutes + "m " + seconds + "s ";
-
-            document.getElementById("counter").innerHTML = perDay =++ startYear;
-            // If the count down is finished, write some text
-            if (distance < 0) {
-                clearInterval(x);
-                document.getElementById("demo").innerHTML = "EXPIRED";
-            }
-        }, 1000);
+        window.onload = function ()
+        {
+            fun1();
+            fun2();
+        }
     </script>
-
+</div>
 </div>
 
+<div class="animation-carrot">
+    <div id="guloneone">
+    <img src="gulerodvandret.png" alt="gulerodvandret.png">
+    </div>
+    </div>
+<div class="counter-stuff">
+    Hver dag bliver der smidt næsten 2.000 tons fødevarer ud i Danmark.
+</div>
+<div class="counter-stuff">
+    <p id="counterdag">
+    </p>
+    <p id="infocounterdag">
+        TONS MADSPILD I DAG
+    </p>
+
+</div>
+</div>
+
+<div class="counter-stuff">
+    Det samlede madspild fra husholdningerne 261.000-ton pr. år.</div>
 </body>
+
 </html>
