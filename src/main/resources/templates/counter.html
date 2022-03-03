@@ -19,6 +19,12 @@
             font-family: "Arial Black";
         }
 
+        #counteryear{
+            color: #114d4d;
+            text-decoration: none;
+            font-family: "Arial Black";
+            font-size: 225%;
+        }
         .navigator a:hover {
             color: black;
         }
@@ -42,6 +48,13 @@
             font-family: "Arial Black";
         }
 
+        .stuff-stuff-text{
+            color: #114d4d;
+            text-decoration: none;
+            font-family: "Arial Black";
+            font-size: 100%;
+        }
+
         #counter a:hover {
             color: black;
         }
@@ -54,14 +67,11 @@
             color: #114d4d;
             text-decoration: none;
             font-family: "Arial Black";
-            font-size: 400%;
+            font-size: 500%;
         }
         .counter-stuffstuff{
             background-color: white;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-evenly;
-            padding: 200px;
+            padding: 100px;
             margin: 25px 0px;
         }
 
@@ -179,11 +189,14 @@
     </div>
 
 <div class="counter-stuffstuff">
-    <p id="counter">
     </p>
-
-    <p id="infocounter">
-         TONS MADSPILD I ÅR
+    <p class="stuff-stuff-text"> AT DER I ÅR ER SPILDT </p>
+    <p id="counteryear">
+    </p>
+    <p class="stuff-stuff-text"> TONS MAD </p>
+</div>
+    <p class="counter-stuff" id="infocounter">
+        At hver dag bliver der smidt næsten 2.000 tons fødevarer ud i Danmark.
     </p>
     <!-- hentet på https://stackoverflow.com/questions/31176605/how-to-make-real-time-count-up-with-javascript -->
     <script>
@@ -213,8 +226,8 @@
             var msInterval = INTERVAL * 1000;
             var now = new Date();
             count = parseInt((now - START_DATE)/msInterval) * INCREMENT + START_VALUE;
-            document.getElementById('counter').innerHTML = (Math.round(count* 100) / 100).toFixed(2);
-            setInterval("count += INCREMENT; document.getElementById('counter').innerHTML = (Math.round(count* 100) / 100).toFixed(2);", msInterval);}
+            document.getElementById('counteryear').innerHTML = (Math.round(count* 100) / 100).toFixed(2);
+            setInterval("count += INCREMENT; document.getElementById('counteryear').innerHTML = (Math.round(count* 100) / 100).toFixed(2);", msInterval);}
 
             function fun2()
             {
@@ -230,7 +243,7 @@
             var now2 = new Date();
             countMONEY = parseInt((now2 - START_DATEMONEY)/msInterval2) * INCREMENTMONEY + START_VALUEMONEY;
             document.getElementById('countermoney').innerHTML = (Math.round(countMONEY* 100) / 100).toFixed(2);
-            setInterval("countMONEY += INCREMENTMONEY; document.getElementById('countermoney').innerHTML = (Math.round(countMONEY* 100) / 100).toFixed(0);", msInterval2);}
+            setInterval("countMONEY += INCREMENTMONEY; document.getElementById('countermoney').innerHTML = (Math.round(countMONEY* 100) / 100).toFixed(2);", msInterval2);}
         window.onload = function ()
         {
            fun1();
@@ -240,21 +253,19 @@
     </script>
 </div>
 </div>
-<div class="counter-stuff">
-    Hver dag bliver der smidt næsten 2.000 tons fødevarer ud i Danmark.
-</div>
+
 <div class="counter-stuffstuff">
     <p id="counterdag">
     </p>
     <p id="infocounterdag">
-        TONS MADSPILD I DAG
+       TONS MADSPILD I DAG
     </p>
 
 </div>
 </div>
 
 <div class="counter-stuff">
-    Det samlede madspild fra husholdningerne 261.000-ton pr. år.</div>
+    At det samlede madspild fra husholdningerne 261.000-ton pr. år.</div>
 </body>
 <div class="counter-stuffstuff">
     <p id="countermoney">
@@ -265,7 +276,7 @@
 
 </div>
 <div class="counter-stuff">
-    Det svarer til 428 kr. i sekundet.</div>
+    At det svarer til 428 kr. i sekundet.</div>
 
 <footer>
     <p>Mail: madspildmoddanmark@gmail.dk</p>
