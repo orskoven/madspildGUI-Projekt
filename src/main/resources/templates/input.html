@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hjælp | Danmark Mod Madspild</title>
+
+    <style>
+
+    .navigator{
+    background-color: beige;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 1.4%;
+    margin: 0px 0px;
+    }
+
+    .navigator a{
+    color: #114d4d;
+    text-decoration: none;
+    font-family: "Arial Black";
+    }
+
+    .navigator a:hover {
+    color: black;
+    }
+
+    .navigator a.input {
+    color: sandybrown;
+    }
+
+    .box{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .tekst{
+        color: #114d4d;
+        font-family: "Arial Black";
+        font-size: 40px;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        padding-left: 5%;
+
+    }
+
+    .tekst1{
+        margin-left: 20%;
+        color: #114d4d;
+        font-family: "Arial Black";
+        font-size: 40px;
+        display: flex;
+        flex-direction: column;
+        align-content: end;
+        padding-right:5%;
+    }
+
+    .formular{
+        background-color: beige;
+        color: #114d4d;
+        font-family: "Arial";
+        font-size: 15px;
+        padding-top: 5%;
+        padding-bottom: 5%;
+        padding-right: 2%;
+        padding-left: 2%;
+        width: 75%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        border: #114d4d solid;
+    }
+    label{
+        line-height: 30px;
+        font-size: 15px;
+    }
+    input{
+        margin-top: 5%;
+    }
+
+    .h{
+        font-size: 10px;
+    }
+
+    footer{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    .box1{
+        display: flex;
+        flex-direction: row;
+    }
+
+
+    </style>
+
+</head>
+<body>
+
+<div class="container">
+
+    <div class="navigator top">
+        <a href="index.html">Forside</a>
+        <a href="counter.html">Vidste du?</a>
+        <a href="recipes.html">Tøm Køleskabet</a>
+        <a href="tips.html">Gode Råd / Tips</a>
+        <a class="input" href="input.html">Kontakt</a>
+    </div>
+
+    <div class="box">
+         <div class="tekst">
+
+            <p>Modtag nye opskrifter og undgå madspild</p>
+            <p>Følg med i de nyeste tiltag mod madspild</p>
+
+        </div>
+
+         <div class="tekst1">
+
+             <p>Tilmeld dig vores nyhedsbrev <span style="color: sandybrown">her</span></p>
+
+             <div class="formular">
+                 <div class="h">
+                     <form>
+
+
+                         <div class="h">
+                         <br>
+                         Tilmeld: <input type="checkbox" name="tilmeld">
+                         <br>
+                         Godkend privatlivspolitik: <input type="checkbox" name="privatlivspolitik">
+                         </div>
+
+                     </form>
+                 </div>
+
+                 <div class="h">
+                     <form>
+                         <input type="text" name="fornavn" placeholder="Fornavn">
+                         <br>
+                         <input type="text" name="efternavn" placeholder="Efternavn">
+                         <br>
+                         <input type="email" name="email" placeholder="Email">
+                         <br>
+                         <input type="tel" name="telefon" placeholder="Tlf">
+                         <br>
+                         <input type="text" name="adresse" placeholder="Adresse">
+                         <br>
+                         <input type="text" name="postnummer" placeholder="Postnummer">
+                         <br>
+                         <input type="text" name="by" placeholder="By">
+                         <input type="submit" value="Indsend">
+                     </form>
+                 </div>
+             </div>
+
+        </div>
+    </div>
+
+    <div class="box1">
+
+        <div class="tekst2">
+
+        </div>
+
+        <div class="tekst3">
+
+        </div>
+
+    </div>
+
+    <footer>
+        <p>Mail: madspildmoddanmark@gmail.dk</p>
+        <p>Tlf: 99 99 12 67 80 99</p>
+        <p>Meinungsgade 899 København</p>
+        <p>CVR: 87687983</p>
+    </footer>
+
+</div>
+
+</body>
+</html>
