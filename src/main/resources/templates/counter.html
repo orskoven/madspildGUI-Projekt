@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <title>Vidste du? | Danmark Mod Madspild </title>
@@ -18,7 +18,25 @@
             text-decoration: none;
             font-family: "Arial Black";
         }
+        #countermoney{
+            color: #114d4d;
+            text-decoration: none;
+            font-family: "Arial Black";
+            font-size: 150%;
+        }
+        #counterdag{
+            color: #114d4d;
+            text-decoration: none;
+            font-family: "Arial Black";
+            font-size: 225%;
+        }
 
+        #counteryear{
+            color: #114d4d;
+            text-decoration: none;
+            font-family: "Arial Black";
+            font-size: 225%;
+        }
         .navigator a:hover {
             color: black;
         }
@@ -42,6 +60,13 @@
             font-family: "Arial Black";
         }
 
+        .stuff-stuff-text{
+            color: #114d4d;
+            text-decoration: none;
+            font-family: "Arial Black";
+            font-size: 100%;
+        }
+
         #counter a:hover {
             color: black;
         }
@@ -54,15 +79,13 @@
             color: #114d4d;
             text-decoration: none;
             font-family: "Arial Black";
-            font-size: 400%;
+            font-size: 500%;
         }
         .counter-stuffstuff{
+            justify-content: space-around;
             background-color: white;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-evenly;
-            padding: 200px;
             margin: 25px 0px;
+            margin-top: 10%;
         }
 
 
@@ -145,12 +168,15 @@
                 top: -400px;
             }
             to {
-                top: 2500px;
+                top: 4000px;
 
             }
         }
 
         footer{
+            color: #114d4d;
+            text-decoration: none;
+            font-family: "Arial Black";
             display: flex;
             flex-direction: row;
             justify-content: space-evenly;
@@ -179,11 +205,12 @@
     </div>
 
 <div class="counter-stuffstuff">
-    <p id="counter">
+    <p id="counteryear">
     </p>
-
-    <p id="infocounter">
-         TONS MADSPILD I ÅR
+    <p> TONS MADSPILD I ÅR </p>
+</div>
+    <p class="counter-stuff" id="infocounter">
+        At hver dag bliver der smidt næsten 2.000 tons fødevarer ud i Danmark.
     </p>
     <!-- hentet på https://stackoverflow.com/questions/31176605/how-to-make-real-time-count-up-with-javascript -->
     <script>
@@ -213,8 +240,8 @@
             var msInterval = INTERVAL * 1000;
             var now = new Date();
             count = parseInt((now - START_DATE)/msInterval) * INCREMENT + START_VALUE;
-            document.getElementById('counter').innerHTML = (Math.round(count* 100) / 100).toFixed(2);
-            setInterval("count += INCREMENT; document.getElementById('counter').innerHTML = (Math.round(count* 100) / 100).toFixed(2);", msInterval);}
+            document.getElementById('counteryear').innerHTML = (Math.round(count* 100) / 100).toFixed(2);
+            setInterval("count += INCREMENT; document.getElementById('counteryear').innerHTML = (Math.round(count* 100) / 100).toFixed(2);", msInterval);}
 
             function fun2()
             {
@@ -230,7 +257,7 @@
             var now2 = new Date();
             countMONEY = parseInt((now2 - START_DATEMONEY)/msInterval2) * INCREMENTMONEY + START_VALUEMONEY;
             document.getElementById('countermoney').innerHTML = (Math.round(countMONEY* 100) / 100).toFixed(2);
-            setInterval("countMONEY += INCREMENTMONEY; document.getElementById('countermoney').innerHTML = (Math.round(countMONEY* 100) / 100).toFixed(0);", msInterval2);}
+            setInterval("countMONEY += INCREMENTMONEY; document.getElementById('countermoney').innerHTML = (Math.round(countMONEY* 100) / 100).toFixed(2);", msInterval2);}
         window.onload = function ()
         {
            fun1();
@@ -239,22 +266,20 @@
         }
     </script>
 </div>
-</div>
-<div class="counter-stuff">
-    Hver dag bliver der smidt næsten 2.000 tons fødevarer ud i Danmark.
-</div>
+
+
 <div class="counter-stuffstuff">
     <p id="counterdag">
     </p>
     <p id="infocounterdag">
-        TONS MADSPILD I DAG
+       TONS MADSPILD I DAG
     </p>
 
 </div>
-</div>
+
 
 <div class="counter-stuff">
-    Det samlede madspild fra husholdningerne 261.000-ton pr. år.</div>
+    At det samlede madspild fra husholdningerne 261.000-ton pr. år.</div>
 </body>
 <div class="counter-stuffstuff">
     <p id="countermoney">
@@ -265,7 +290,7 @@
 
 </div>
 <div class="counter-stuff">
-    Det svarer til 428 kr. i sekundet.</div>
+    At det svarer til 428 kr. i sekundet.</div>
 
 <footer>
     <p>Mail: madspildmoddanmark@gmail.dk</p>
@@ -273,6 +298,7 @@
     <p>Meinungsgade 899 København</p>
     <p>CVR: 87687983</p>
 </footer>
+
 
 </div>
 
