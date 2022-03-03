@@ -176,6 +176,65 @@
             justify-content: space-evenly;
         }
 
+        /* Dropdown Button */
+        .dropbtn {
+            background-color: beige;
+            font-family: "Arial Black";
+            color: #114d4d;
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+            margin-top: -8%;
+        }
+
+
+        /* The container <div> - needed to position the dropdown content */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        /* Dropdown Content (Hidden by Default) */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: white;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        /* Links inside the dropdown */
+        .dropdown-content a {
+            font-family: "Arial";
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        /* Change color of dropdown links on hover */
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        /* Show the dropdown menu on hover */
+        .dropdown:hover .dropdown-content {
+            display: block;
+
+        }
+
+        /* Change the background color of the dropdown button when the dropdown content is shown */
+        .dropdown:hover .dropbtn {
+            color: sandybrown;}
+
+        .dropdown:focus .dropbtn{
+            color: sandybrown;
+        }
+
+        .dropbtn{
+            color: sandybrown;
+        }
+
     </style>
 
 </head>
@@ -187,13 +246,20 @@
     <div class="navigator top">
         <a href="index.html">Forside</a>
         <a href="counter.html">Vidste du?</a>
-        <a class = "opskrifter" href="recipes.html">Tøm Køleskabet</a>
+        <div class="dropdown">
+            <button class="dropbtn">Tøm Køleskabet</button>
+            <div class="dropdown-content">
+                <a href="#snacks">Snacks</a>
+                <a href="#retter">Retter</a>
+                <a href="#manmågodt">Man Må Godt</a>
+            </div>
+        </div>
         <a href="tips.html">Gode Råd / Tips</a>
     </div>
 
 
     <div class="tekst1">
-        <h1>Gør dit for at reducere madspild i dit hjem</h1>
+        <h1 id="snacks">Gør dit for at reducere madspild i dit hjem</h1>
     </div>
 
     <div class="tekst2">
@@ -238,7 +304,7 @@
 
         <div class="citat">
              <p>"Reducering af madspild er en af de vigtigste ting vi kan gøre for at arbejde med den globale opvarmning"</p>
-            <footer>- Tine, direktør Danmark mod madspild</footer>
+            <footer id="retter">- Tine, direktør Danmark mod madspild</footer>
         </div>
     </div>
 
@@ -282,7 +348,7 @@
 
         <div class="citat1">
             <p>"Rester kan faktisk være lækkert"</p>
-            <footer> - Jørgen, 54 år, Familie far </footer>
+            <footer id="manmågodt"> - Jørgen, 54 år, Familie far </footer>
         </div>
 
         <div class="citat2">
