@@ -1,6 +1,5 @@
 package com.example.madspildguiprojekt.controllers;
 
-import com.example.madspildguiprojekt.controllers.repositories.Greeting;
 import jdk.jfr.Category;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
