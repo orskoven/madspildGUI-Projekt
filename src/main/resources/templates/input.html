@@ -32,7 +32,7 @@
     .box{
         display: flex;
         flex-direction: row;
-        margin-top: 5%;
+        margin-top: 0%;
     }
 
     .tekst{
@@ -43,8 +43,6 @@
         flex-direction: column;
         align-content: center;
         padding-left: 5%;
-
-
     }
 
     .tekst1{
@@ -141,7 +139,7 @@
     }
 
     .formular2{
-        background-color: beige;
+
         padding-top: 5%;
         padding-bottom: 5%;
         padding-right: 2%;
@@ -194,7 +192,6 @@
 
     .dropdown:hover .dropdown-content {
         display: block;
-
     }
 
     .dropdown:hover .dropbtn {
@@ -204,8 +201,18 @@
         color: sandybrown;
     }
 
+    .overskrift{
+        color: #114d4d;
+        font-size: 60px;
+        font-family: "Arial Black";
+        display: flex;
+        justify-content: center;
+    }
+
 
     </style>
+
+
 
 </head>
 <body>
@@ -216,7 +223,8 @@
         <a href="index.html">Forside</a>
         <a href="counter.html">Vidste du?</a>
         <div class="dropdown">
-            <button class="dropbtn">Tøm Køleskabet</button>
+            <a href="recipes.html">Tøm Køleskabet</a>
+            <button class="dropbtn"></button>
             <div class="dropdown-content">
                 <a href="recipes.html#snacks">Snacks</a>
                 <a href="recipes.html#retter">Retter</a>
@@ -227,17 +235,23 @@
         <a class="input" href="input.html">Kontakt</a>
     </div>
 
+    <div class="overskrift">
+        <p>Hold dig opdateret med vores nyhedsbrev</p>
+
+    </div>
+
     <div class="box">
          <div class="tekst">
 
-            <p>Modtag nye opskrifter og undgå madspild</p>
-            <p>Følg med i de nyeste tiltag mod madspild</p>
+             <p>Tilmeld dig vores nyhedsbrev <span style="color: sandybrown">kvit og frit</span></p>
+             <p>Modtag nye opskrifter <span style="color: sandybrown">hver måned</span></p>
+             <p>Følg med i de <span style="color: sandybrown">nyeste</span> tiltag mod madspild</p>
 
         </div>
 
          <div class="tekst1">
 
-             <p>Tilmeld dig vores nyhedsbrev <span style="color: sandybrown">her</span></p>
+             <p>Tilmeld dig vores nyhedsbrev <span style="color: sandybrown">her⬇</span></p>
 
              <div class="formular">
                  <div class="h">
@@ -302,21 +316,21 @@
         </div>
 
         <div class="tekst3">
-            <p class="pe">Har du nogle spørgsmål? Spørg her</p>
-
+            <div class="pe">
+                <p>Har du nogle spørgsmål? Spørg <span style="color: sandybrown">her⬇</span></p>
+            </div>
             <div class="formular2">
+
                 <form>
                     <input class="besked"  type="text" name="fornavn" placeholder="Fornavn">
-                </form>
 
-                <form>
                     <input class="besked" type="email" name="email" placeholder="Email">
+
+                    <textarea class="besked"  name="besked" rows="10" cols="49"placeholder="Skriv besked"></textarea>
+
+                    <input type="submit" value="Indsend">
                 </form>
 
-                <form>
-                    <textarea class="besked"  name="besked" rows="10" cols="50"placeholder="Skriv besked"></textarea>
-                </form>
-                <input type="submit" value="Indsend">
             </div>
 
         </div>
